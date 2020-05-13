@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML>
+<HEAD><TITLE>Bright Oaks | Gallery</TITLE>
+	<meta content="text/html; charset=utf-8" http-equiv=Content-Type />
+	<meta name=author content="Bright Oaks by BC" />
+	<meta name=description content="A fresher perspective. We do website design, graphics and IT Solutions." />
+	<meta name=keywords content="main, projects, about, contact, web, design, graphics, solutions, site, website, system" />
+	<link href="images/icon/brightoaks.ico" rel="SHORTCUT ICON">
+<SCRIPT src="galleria/jquery-1.4.2.js"></SCRIPT>
+
+<SCRIPT src="galleria/galleria.js"></SCRIPT>
+
+<STYLE>HTML {
+	BACKGROUND: #111
+}
+BODY {
+	BACKGROUND: #111
+}
+#galleria {
+	MARGIN: 20px auto; WIDTH: 900px
+}
+A {
+	COLOR: #aaa
+}
+</STYLE>
+
+
+
+
+</HEAD>
+<BODY>
+
+<DIV id=galleria>
+<DIV><A 
+href="http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Basket_of_strawberries_red_accent.jpg/800px-Basket_of_strawberries_red_accent.jpg"><IMG 
+src="galleria/120px-Basket_of_strawberries_red_accent.jpg"> 
+</A><STRONG>Strawberries</STRONG> <SPAN>Lorem ipsum dolor sit amet, <A 
+href="http://galleria.aino.se/media/galleria/demos/classic-02.html#">consectetur</A> 
+adipiscing <EM>elit</EM>. Etiam quam velit, aliquet nec sodales vel, porttitor 
+id justo. </SPAN></DIV>
+<DIV><A 
+href="http://upload.wikimedia.org/wikipedia/commons/2/2b/Frederic_fontaine_1.jpg"><IMG 
+src="galleria/120px-Frederic_fontaine_1.jpg"> </A>
+<STRONG>Strawberries</STRONG> <SPAN>Lorem ipsum dolor sit amet, <A 
+href="http://galleria.aino.se/media/galleria/demos/classic-02.html#">consectetur</A> 
+adipiscing <EM>elit</EM>. Etiam quam velit, aliquet nec sodales vel, porttitor 
+id justo. </SPAN>
+</DIV>
+<DIV><A 
+href="http://upload.wikimedia.org/wikipedia/commons/2/2d/Ns1-unsharp.jpg"><IMG 
+src="galleria/120px-Ns1-unsharp.jpg"> </A></DIV>
+<DIV><A 
+href="http://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Laser_effects.jpg/800px-Laser_effects.jpg"><IMG 
+src="galleria/120px-Laser_effects.jpg"> </A></DIV></DIV>
+<SCRIPT>
+    
+    // Load theme
+    Galleria.loadTheme('galleria/galleria.classic.js');
+    
+    // run galleria and add some options
+    $('#galleria').galleria({
+        image_crop: true,
+        data_config: function(img) {
+            // will extract and return image captions from the source:
+            return  {
+                title: $(img).parent().next('strong').html(),
+                description: $(img).parent().next('strong').next().html()
+            };
+        }
+    });
+    </SCRIPT>
+</BODY></HTML>
